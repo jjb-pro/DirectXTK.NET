@@ -10,6 +10,7 @@
     <ClInclude Include="Source\StdAfx.h" />
     <ClInclude Include="Source\TextureHelper.h" />
     <ClInclude Include="Source\Enums.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\StdAfx.cpp" />
@@ -17,5 +18,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DirectXTK.NET.rc">
+      <Filter>Ressourcendateien</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
