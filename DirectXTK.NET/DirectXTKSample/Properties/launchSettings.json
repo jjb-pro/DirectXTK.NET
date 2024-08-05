@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DirectXTKSample": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
