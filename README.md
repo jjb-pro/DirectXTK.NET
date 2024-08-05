@@ -12,7 +12,7 @@ Currently only three methods are wrapped that allow you to quickly load textures
 
 To use DirectXTK.NET, follow these steps:
 
-1. **Download**: Download the latest version: [Releases]() (there is no NuGet package).
+1. **Download**: Download the latest version: [Releases](https://github.com/jjb-pro/DirectXTK.NET/releases/) (there is no NuGet package).
 1. **Add Reference**: Add a reference to the DirectXTK.NET assembly in your .NET project.
 2. **Initialize DirectX**: Create and initialize DirectX 11 device and context using Silk.NET.
 3. **Texture Operations**: Use the `TextureHelper` class to create and save textures.
