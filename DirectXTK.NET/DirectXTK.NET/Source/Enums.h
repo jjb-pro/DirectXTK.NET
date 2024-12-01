@@ -2,16 +2,23 @@
 
 #include <wincodec.h>
 
+using namespace System;
+
 namespace DirectXTK
 {
 	public enum class ContainerFormat
 	{
-		Bmp = 0,
-		Png,
+		Adng,
+		Bmp,
+		Dds,
+		Gif,
+		Heif,
 		Ico,
 		Jpeg,
+		Png,
+		Raw,
 		Tiff,
-		Gif,
+		Webp,
 		Wmp
 	};
 
@@ -113,14 +120,19 @@ namespace DirectXTK
 	{
 		switch (containerFormat)
 		{
+			case ContainerFormat::Adng: return GUID_ContainerFormatAdng;
 			case ContainerFormat::Bmp: return GUID_ContainerFormatBmp;
-			case ContainerFormat::Png: return GUID_ContainerFormatPng;
+			case ContainerFormat::Dds: return GUID_ContainerFormatDds;
+			case ContainerFormat::Gif: return GUID_ContainerFormatGif;
+			case ContainerFormat::Heif: return GUID_ContainerFormatHeif;
 			case ContainerFormat::Ico: return GUID_ContainerFormatIco;
 			case ContainerFormat::Jpeg: return GUID_ContainerFormatJpeg;
+			case ContainerFormat::Png: return GUID_ContainerFormatPng;
+			case ContainerFormat::Raw: return GUID_ContainerFormatRaw;
 			case ContainerFormat::Tiff: return GUID_ContainerFormatTiff;
-			case ContainerFormat::Gif: return GUID_ContainerFormatGif;
+			case ContainerFormat::Webp: return GUID_ContainerFormatWebp;
 			case ContainerFormat::Wmp: return GUID_ContainerFormatWmp;
-			default: throw gcnew System::ArgumentOutOfRangeException("containerFormat");
+			default: throw gcnew ArgumentOutOfRangeException("containerFormat");
 		}
 	}
 
@@ -218,7 +230,7 @@ namespace DirectXTK
 			case PixelFormat::Format16bppYQuantizedDctCoefficients: return GUID_WICPixelFormat16bppYQuantizedDctCoefficients;
 			case PixelFormat::Format16bppCbQuantizedDctCoefficients: return GUID_WICPixelFormat16bppCbQuantizedDctCoefficients;
 			case PixelFormat::Format16bppCrQuantizedDctCoefficients: return GUID_WICPixelFormat16bppCrQuantizedDctCoefficients;
-			default: throw gcnew System::ArgumentOutOfRangeException("pixelFormat");
+			default: throw gcnew ArgumentOutOfRangeException("pixelFormat");
 		}
 	}
 }

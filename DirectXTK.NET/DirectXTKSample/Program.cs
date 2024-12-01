@@ -15,17 +15,19 @@ unsafe
 
     D3D11.GetApi(null).CreateDevice(null, D3DDriverType.Hardware, 0, (uint)CreateDeviceFlag.Debug, null, 0, D3D11.SdkVersion, device.GetAddressOf(), null, devCtx.GetAddressOf());
 
+    device.SetInfoQueueCallback(msg => Console.WriteLine($"{SilkMarshal.PtrToString((nint)msg.PDescription, NativeStringEncoding.Auto)} ({msg.Category}: {msg.ID})"));
+
     ComPtr<ID3D11Resource> texture = default;
     ComPtr<ID3D11ShaderResourceView> textureSrv = default;
 
     // load texture
     SilkMarshal.ThrowHResult(
-        TextureHelper.CreateTextureFromFile(device, @"Resources\stone.dds", texture.GetAddressOf(), textureSrv.GetAddressOf())
+        DDSTextureHelper.CreateDDSTextureFromFile(device, devCtx, @"Resources\sky.dds", 0, Usage.Immutable, (uint)BindFlag.ShaderResource, 0, ResourceMiscFlag.Texturecube, DDSLoaderFlag.Default, texture.GetAddressOf(), textureSrv.GetAddressOf(), DDSAlphaMode.Unknown)
     );
 
     // save texture
     SilkMarshal.ThrowHResult(
-        TextureHelper.SaveWICTextureToFile(devCtx, texture, @"Resources\stone_out.jpeg", ContainerFormat.Jpeg)
+        WICTextureHelper.SaveDDSTextureToFile(devCtx, texture, @"Resources\sky_out.bmp")
     );
 
     textureSrv.Dispose();

@@ -5,23 +5,34 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="TextureHelpers">
+      <UniqueIdentifier>{a3d4dbcc-2d46-4c50-a6bc-e1487e70afa6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\StdAfx.h" />
-    <ClInclude Include="Source\TextureHelper.h" />
     <ClInclude Include="Source\Enums.h" />
     <ClInclude Include="resource.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Source\StdAfx.cpp" />
-    <ClCompile Include="Source\TextureHelper.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <ClInclude Include="Source\WICTextureHelper.h">
+      <Filter>TextureHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\DDSTextureHelper.h">
+      <Filter>TextureHelpers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DirectXTK.NET.rc">
       <Filter>Ressourcendateien</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\WICTextureHelper.cpp">
+      <Filter>TextureHelpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DDSTextureHelper.cpp">
+      <Filter>TextureHelpers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
