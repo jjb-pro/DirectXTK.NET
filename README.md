@@ -1,4 +1,7 @@
+![blue DirectXTK icon](https://github.com/jjb-pro/DirectXTK.NET/DirectXTK.NET/assets/icon.png)
 # DirectXTK.NET
+
+[![NuGet](https://img.shields.io/nuget/v/DirectXTK.NET.svg)](https://www.nuget.org/packages/DirectXTK.NET)
 
 DirectXTK.NET is a .NET wrapper for the DirectX Tool Kit, built using C++/CLI for Silk.NET and DirectX 11. 
 
@@ -13,10 +16,13 @@ Currently only methods are wrapped that allow you to quickly load textures for y
 
 To use DirectXTK.NET, follow these steps:
 
-1. **Download**: Download the latest version: [Releases](https://github.com/jjb-pro/DirectXTK.NET/releases/) (there is no NuGet package).
-2. **Add Reference**: Add a reference to the DirectXTK.NET assembly in your .NET project.
-3. **Initialize DirectX**: Create and initialize DirectX 11 device and context using Silk.NET.
-4. **Texture Operations**: Use the `WICTextureHelper` class to create and save textures or utilize the `DDSTextureHelper` class for \*.dds texture loading.
+1. **Install via NuGet**: Add the package to your project using the .NET CLI:
+   ```bash
+   dotnet add package DirectXTK.NET
+   ```
+   Or, search for `DirectXTK.NET` in the NuGet Package Manager in Visual Studio.
+2. **Initialize DirectX**: Create and initialize a DirectX 11 device and context using Silk.NET.
+4. **Use the package**: Use the `WICTextureHelper` class to create and save textures or the `DDSTextureHelper` class to load `.dds` textures.
 
 ## Example
 
