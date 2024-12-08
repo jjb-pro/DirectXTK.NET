@@ -1,4 +1,4 @@
-![blue DirectXTK icon](https://github.com/jjb-pro/DirectXTK.NET/DirectXTK.NET/assets/icon.png)
+![blue DirectXTK icon](https://github.com/jjb-pro/DirectXTK.NET/blob/main/DirectXTK.NET/assets/icon.png)
 # DirectXTK.NET
 
 [![NuGet](https://img.shields.io/nuget/v/DirectXTK.NET.svg)](https://www.nuget.org/packages/DirectXTK.NET)
