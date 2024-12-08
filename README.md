@@ -22,7 +22,7 @@ To use DirectXTK.NET, follow these steps:
    ```
    Or, search for `DirectXTK.NET` in the NuGet Package Manager in Visual Studio.
 2. **Initialize DirectX**: Create and initialize a DirectX 11 device and context using Silk.NET.
-4. **Use the package**: Use the `WICTextureHelper` class to create and save textures or the `DDSTextureHelper` class to load `.dds` textures.
+3. **Use the package**: Use the `WICTextureHelper` class to create and save textures or the `DDSTextureHelper` class to load `.dds` textures.
 
 ## Example
 

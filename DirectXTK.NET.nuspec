@@ -6,8 +6,7 @@
     <authors>jjb</authors>
     <owners>jjb</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>DirectXTK.NET is a .NET wrapper for the DirectX Tool Kit, built using C++/CLI for
-      Silk.NET and DirectX 11.</description>
+    <description>DirectXTK.NET is a .NET wrapper for the DirectX Tool Kit, built using C++/CLI for Silk.NET and DirectX 11.</description>
     <tags>DirectX DirectXTK Silk.NET Wrapper</tags>
     <dependencies>
       <group targetFramework="net8.0">
