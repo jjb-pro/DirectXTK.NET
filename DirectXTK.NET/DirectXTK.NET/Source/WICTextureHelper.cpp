@@ -1,3 +1,4 @@
+#include "StdAfx.h"
 #include "WICTextureHelper.h"
 
 using namespace System::Runtime::InteropServices;

@@ -1,3 +1,4 @@
+#include "StdAfx.h"
 #include "DDSTextureHelper.h"
 
 using namespace System;

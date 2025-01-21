@@ -1,3 +1,5 @@
+#pragma warning(disable : 4534)
+
 #include "DDSTextureLoader.h"
 
 using namespace System;

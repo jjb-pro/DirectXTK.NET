@@ -19,13 +19,26 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\AudioEmitterNative.h" />
+    <ClInclude Include="Source\AudioEmitter.h" />
+    <ClInclude Include="Source\AudioEngine.h" />
+    <ClInclude Include="Source\AudioListener.h" />
+    <ClInclude Include="Source\SoundEffectInstance.h" />
+    <ClInclude Include="Source\StdAfx.h" />
+    <ClInclude Include="Source\SoundEffect.h" />
     <ClInclude Include="Source\DDSTextureHelper.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Source\Enums.h" />
     <ClInclude Include="Source\WICTextureHelper.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\AudioEmitterNative.cpp" />
+    <ClCompile Include="Source\AudioEmitter.cpp" />
+    <ClCompile Include="Source\AudioEngine.cpp" />
+    <ClCompile Include="Source\AudioListener.cpp" />
+    <ClCompile Include="Source\SoundEffect.cpp" />
     <ClCompile Include="Source\DDSTextureHelper.cpp" />
+    <ClCompile Include="Source\SoundEffectInstance.cpp" />
     <ClCompile Include="Source\WICTextureHelper.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -36,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Silk.NET.Direct3D11">
-      <HintPath>..\DirectXTKSample\bin\x64\Debug\net8.0\Silk.NET.Direct3D11.dll</HintPath>
+      <HintPath>..\Samples\TextureSample\bin\x64\Debug\net8.0\Silk.NET.Direct3D11.dll</HintPath>
     </Reference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -137,14 +150,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;DIRECTXTKNET_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>
-      </PrecompiledHeaderFile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);Kernel32.lib;WindowsApp.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -153,11 +166,10 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;DIRECTXTKNET_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;DIRECTXTKNET_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_WIN32_WINNT 0x0A00</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>
-      </PrecompiledHeaderFile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -165,6 +177,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);Kernel32.lib;WindowsApp.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

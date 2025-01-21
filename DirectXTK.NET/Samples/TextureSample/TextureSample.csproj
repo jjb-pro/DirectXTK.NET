@@ -5,24 +5,22 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-	<Platforms>AnyCPU;x64</Platforms>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Platforms>x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Silk.NET.Direct3D11" Version="2.20.0" />
+    <PackageReference Include="Silk.NET.Direct3D11" Version="2.22.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DirectXTK.NET\DirectXTK.NET.vcxproj" />
+    <ProjectReference Include="..\..\DirectXTK.NET\DirectXTK.NET.vcxproj" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update="Resources\sky.dds">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\stone.dds">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
+
 </Project>

@@ -8,6 +8,9 @@
     <Filter Include="TextureHelpers">
       <UniqueIdentifier>{a3d4dbcc-2d46-4c50-a6bc-e1487e70afa6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Audio">
+      <UniqueIdentifier>{a2b35aea-d3c2-47d4-bbc8-db4de8cfcc0e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Enums.h" />
@@ -17,6 +20,25 @@
     </ClInclude>
     <ClInclude Include="Source\DDSTextureHelper.h">
       <Filter>TextureHelpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\AudioEngine.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SoundEffect.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\StdAfx.h" />
+    <ClInclude Include="Source\SoundEffectInstance.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\AudioListener.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\AudioEmitter.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\AudioEmitterNative.h">
+      <Filter>Audio</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -30,6 +52,24 @@
     </ClCompile>
     <ClCompile Include="Source\DDSTextureHelper.cpp">
       <Filter>TextureHelpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\AudioEngine.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SoundEffect.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SoundEffectInstance.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\AudioListener.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\AudioEmitter.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\AudioEmitterNative.cpp">
+      <Filter>Audio</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
